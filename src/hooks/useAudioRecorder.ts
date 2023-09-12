@@ -80,6 +80,8 @@ const useAudioRecorder: (
           stream,
           mediaRecorderOptions
         );
+        recorder.setAudioEncodingBitRate(16*44100);
+        recorder.setAudioSamplingRate(44100);
         setMediaRecorder(recorder);
         recorder.start();
         _startTimer();
